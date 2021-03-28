@@ -12,7 +12,7 @@ angular.module('app').config(function(markedProvider) {
 })
 
 angular.module('app').controller('ctrl', function($scope) {
-      $scope.my_markdown = '#앵귤러로 ajax를 호출 한다면? \n > 돔이 로드되기 전 가져올 수 있지 않을까..  \n\n ``` java \n public void int func { \n \t int a = 0; \n } \n ```';
+    $scope.my_markdown = '# Angular Markdown Editor\n\n> GitHub Flavored Markdown Editor\n\n# Built with\n- **[marked](https://github.com/chjj/marked)** for Parsing Markdown\n- **[angular-marked](https://github.com/Hypercubed/angular-marked)** for easier usage of *marked*\n- **[highlight-js](https://github.com/isagalaev/highlight.js)** for code highlighting\n- **[github-markdown-css](https://github.com/sindresorhus/github-markdown-css)** for beautifying markdown output\n- **[highlight-js css](https://github.com/isagalaev/highlight.js/tree/master/src/styles)** for beautifying code output\n\n# Examples\n* Javascript\n\n```javascript\nfunction() {	\n  console.log("This is awesome!");\n}\n```\n\n* Bash\n\n```bash\n# step 1\nnpm install\n```\netc..\n\n# The End\n- Enjoy ~\n'
 
       //     Tab Support for Text-area
       function enableTab(id) {

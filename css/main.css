@@ -66,23 +66,6 @@ a {
   color: #9d59eb;
 }
 
-h1 {
-	font-size: 20px;
-	font-size: calc(18px + (23 - 18) * ((100vw - 320px) / (2560 - 320)));
-	color: #333;
-	font-stretch: 100%;
-	font-style: normal;
-	font-weight: 500;
-    letter-spacing: 1.25px;
-    line-height: calc(30px + (45 - 35) * ((100vw - 320px) / (2560 - 320)));
-}
-p {
-  font-size: 18px;
-  line-height: 1.7;
-  margin: 10px 0;
-  letter-spacing: 1.2px;
-}
-
 .green {
 	color: #0ff1b3;
 }
