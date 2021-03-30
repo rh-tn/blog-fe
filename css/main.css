@@ -56,6 +56,7 @@ a {
 
 .hello a {
   transition: 0.4s ease-out color;
+  text-decoration:none;
   color: #555;
 }
 .hello a:hover {
@@ -211,8 +212,7 @@ main, header, footer {
 
 header {
   position: relative;
-  height: 10vw;
-  min-height:8rem;
+  min-height: 7rem;
   max-height: 95vh;
   min-width:300px;
   overflow: hidden;
@@ -239,7 +239,7 @@ header {
   flex-flow: row wrap;
   background: transparent;
   padding: 0;
-  height: 8rem;
+  height: 7rem;
   box-sizing: border-box;
 }
 @media only screen and (min-width: 768px) {

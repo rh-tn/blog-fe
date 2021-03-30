@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
+
+.post {
+  max-width: 900px;
+  padding: 50px;
+  margin: 15px auto;
+  font-family: 'Questrial', sans-serif;
+}
+
+.post h3 {
+  font-size: 18px;
+  padding-bottom: 15px;
+  margin: 0;
+}
+
+.post h2 {
+  padding-top: 20px;
+  padding-bottom 10px;
+  line-height: 50px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.post .category {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.post .category {
+  border-bottom: #8888ff solid 3px;
+}
+
+.post:not(:last-child) {
+  border-bottom: 1px solid #cbc5d4;
+}
+
+.post .author {
+  color: grey;
+  display: flex;
+  align-items: center;
+}
+
+.post p {
+  padding-top: 15px;
+}
+
+.post .author img {
+  margin-left: 1rem;
+  border-radius: 20px;
+  max-width: 32px;
+}
+
+.post .keepReading,
+.post .closeArticle {
+  float: right;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.post .closeArticle {
+  opacity: 0;
+}
+
+.post article {
+  display: none;
+}
+
+@media screen and (max-width: 980px) {
+  .post h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .post h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .post .keepReading,
+  .post .closeArticle {
+    width: 100%;
+    text-align: center;
+    float: none;
+    margin: 20px auto 0px;
+  }
+  .post .closeArticle {
+    margin: 0px auto 20px;
+  }
+}
