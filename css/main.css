@@ -93,13 +93,18 @@ a {
     text-align: justify-all;
   }
 
-main, header, footer {
-	width: 1145px;
+main, header {
+	width: 60%;
 	height: auto;
 	margin: auto;
 }
+
+footer {
+  margin-top : 3rem;
+}
+
 @media only screen and (max-width: 1200px) {
-main, header, footer {
+main, header {
       width: 968px;
       padding: 2em 0;
     }
@@ -110,9 +115,9 @@ main, header, footer {
     }
   }
 @media only screen and (max-width: 1024px) {
-main, header, footer {
+main, header {
       width: 727px;
-    padding: 1em 0;
+    padding: 0 0;
     }
     h1 {
     	line-height: 1.5;
@@ -122,9 +127,9 @@ main, header, footer {
     }
   }
 @media only screen and (max-width: 768px) {
-main, header, footer {
+main, header {
     width: 90%;
-    padding: 1em 0;
+    padding: 0 0;
   }
   .row_item_50 {
   	width: 100%;

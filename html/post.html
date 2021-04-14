@@ -9,9 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
 
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
-    <link rel="stylesheet" href="https://cdn.rawgit.com/sindresorhus/github-markdown-css/gh-pages/github-markdown.css">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/isagalaev/highlight.js/master/src/styles/github.css">
-
+    <link rel="stylesheet" href="https://knit.navercorp.com/libs/knit/2.0.0/css/knit.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.26.0/codemirror.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.26.0/theme/material.css"> 
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/post.css">
 
@@ -54,22 +54,42 @@
     </header>
 
     <main>
-        <div class="contents" ng-app="app" ng-controller="ctrl">
-            <div class="left" style="display: none;">
-                <textarea id="txt" ng-model="my_markdown"></textarea>
-            </div>
-            <div class="right">
-                <div class="markdown-body" marked="my_markdown"></div>
-            </div>
+        <!-- POST 배너 -->
+        <div class="banner">
+            <div class="title">제모옥은 젠킨스 조회로직 개선으로 하겠습니다. 근데 이제 비동기를 곁들인</div>
+            <div class="author">By SI-WON | 2021-03-16 <img src="../img/logo.png"></img></div>
+        </div>      
+
+        <!-- POST 내용 -->
+        <div id="origin" style="display: none;">
+        </div>
+          
+        <div style="display: none;">
+          <textarea class="js-output"></textarea>
+        </div>
+        <div>
+          <iframe class="js-preview"></iframe>
         </div>
     </main>
+
+    <footer class="kn-footer bg-white py-4">
+        <address class="w-100 text-center text-muted mb-0">
+            Copyright ©
+            <b>rhtn</b>
+          All Rights Reserved.
+          Powered by bootstrap.
+        </address>
+    </footer>
+    
 </body>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.min.js"></script>
-<script src="https://cdn.rawgit.com/Hypercubed/angular-marked/master/dist/angular-marked.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
-<script src="https://code.jquery.com/jquery-1.8.0.min.js" integrity="sha256-jFdOCgY5bfpwZLi0YODkqNXQdIxKpm6y5O/fy0baSzE=" crossorigin="anonymous"></script>
+<script src="https://knit.navercorp.com/libs/jquery/3.4.1/jquery.min.js" crossorigin="anonymous"></script>
+<script src="https://knit.navercorp.com/libs/knit/2.0.0/js/knit.bundle.min.js" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.26.0/codemirror.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.26.0/mode/xml/xml.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.26.0/addon/edit/matchbrackets.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.js"></script>
 
 <script src="../js/post.js"></script>
 <script src="../js/main.js"></script>
