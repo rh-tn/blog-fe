@@ -10,13 +10,17 @@
 
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
     <link rel="stylesheet" href="https://knit.navercorp.com/libs/knit/2.0.0/css/knit.min.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.26.0/codemirror.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.26.0/theme/material.css"> 
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.6.0/codemirror.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.6.0/theme/base16-light.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/sindresorhus/github-markdown-css/gh-pages/github-markdown.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/isagalaev/highlight.js/master/src/styles/github.css">
+
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/post.css">
 
 </head>
-<body>
+<body ng-app="cm">
     <!-- 헤더 -->
     <header>
         <nav id="navigation">
@@ -54,22 +58,29 @@
     </header>
 
     <main>
-        <!-- POST 배너 -->
+
+        <!-- POST 제목 -->
         <div class="banner">
             <div class="title">제모옥은 젠킨스 조회로직 개선으로 하겠습니다. 근데 이제 비동기를 곁들인</div>
             <div class="author">By SI-WON | 2021-03-16 <img src="../img/logo.png"></img></div>
         </div>      
 
+        <!-- POST 부제목 -->
+        <div class="sub-title">
+            <blockquote><p>부제모오오오옥은 서브타이틀이라 불립니다. 그런데 이제 영어로</p></blockquote>
+        </div>
+
         <!-- POST 내용 -->
-        <div id="origin" style="display: none;">
+        <div ng-controller="ctrl">
+            <div class="editor" style="display: none;">
+                <code-editor ng-model="my_markdown">
+                </code-editor>
+            </div>
+            <div id="emo">
+                <div markdown-viewer class="markdown-body"></div>
+            </div>
         </div>
-          
-        <div style="display: none;">
-          <textarea class="js-output"></textarea>
-        </div>
-        <div>
-          <iframe class="js-preview"></iframe>
-        </div>
+
     </main>
 
     <footer class="kn-footer bg-white py-4">
@@ -86,11 +97,18 @@
 <script src="https://knit.navercorp.com/libs/jquery/3.4.1/jquery.min.js" crossorigin="anonymous"></script>
 <script src="https://knit.navercorp.com/libs/knit/2.0.0/js/knit.bundle.min.js" crossorigin="anonymous"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.26.0/codemirror.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.26.0/mode/xml/xml.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.26.0/addon/edit/matchbrackets.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.6.0/codemirror.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.6.0/mode/markdown/markdown.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.6.0/mode/gfm/gfm.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.6.0/mode/javascript/javascript.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.6.0/addon/edit/closebrackets.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.6.0/addon/mode/overlay.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/emojify.js/0.9.5/emojify.min.js"></script>
 
 <script src="../js/post.js"></script>
 <script src="../js/main.js"></script>
+
 </html>
