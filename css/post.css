@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Mono&family=PT+Sans:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+.banner {
+  margin: 5rem 0 1rem 0;
+}
 
 .banner .title {
-  font-family: 'Nanum Gothic', sans-serif;
-  font-size: 2rem;
+  font-family: 'Jua', sans-serif;
+  font-size: 2.5rem;
   margin-top: 2rem;
   margin-bottom: 1.5rem;
 }
@@ -11,18 +16,30 @@
 .banner .author {
   color: grey;
   display: flex;
+  justify-content: space-between;
+  padding-bottom: 4rem;
   align-items: center;
-  margin-bottom: 1.5rem;
 }
 
-.banner .author img {
+.banner .author .left {
+  display: table;
+}
+
+.banner .author .left span {
+  font-family: 'Nanum Gothic', sans-serif;
+  display: table-cell;
+  vertical-align: middle;
+  font-style: italic;
+}
+
+.banner .author .left img {
   margin-left: 1rem;
   border-radius: 20px;
-  max-width: 32px;
+  max-width: 2rem;
 }
 
 .sub-title {
-  padding-bottom: 3rem;
+  padding-bottom: 1.5rem;
 }
 
 .sub-title blockquote {
@@ -33,6 +50,7 @@
 }
 
 .sub-title blockquote p {
+  font-family: 'Jua', sans-serif;
   line-height: 24px;
   min-height: 24px;
 }
@@ -80,3 +98,68 @@
   margin-bottom: -0.25em;
   vertical-align: top;
 }
+
+
+/** social **/
+.social {
+  text-align: center;
+  font-size: 1.5em;
+  color: #555;
+  overflow: hidden;
+}
+.social a {
+  color: inherit;
+  text-decoration: none;
+}
+.social i {
+  margin: 0.3em;
+  cursor: pointer;
+  transition: color 300ms ease, margin-top 300ms ease;
+  transform: translateZ(0);
+}
+.social i:hover {
+  margin-top: -1px;
+}
+.social i#twitter:hover {
+  color: #77DDF6;
+}
+.social i#github:hover {
+  color: black;
+}
+.social i#linkedin:hover {
+  color: #0177B5;
+}
+.social i#code:hover {
+  color: #29A329;
+}
+.social i#stack:hover {
+  color: #ED780E;
+}
+.social i#plus:hover {
+  color: #D43402;
+}
+.social i#mail:hover {
+  color: #F7B401;
+}
+
+
+  @media only screen and (max-width: 768px) {
+    .banner .author .left {
+      max-height: 1rem;
+    }
+    .banner .author .left img{
+      max-height: 1.5rem;
+    }
+    .social {
+      font-size: 1rem;
+    }
+    .banner {
+      margin-top: 1rem;
+    }
+    .banner .title {
+      font-size: 1.5rem;
+      /* margin-top: rem; */
+      margin-bottom: 1.5rem;
+    }
+    
+  }

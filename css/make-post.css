@@ -1,110 +1,58 @@
-@import url('https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+
+.editor {
+  font-size: 1.1rem;
+  line-height: 1rem !important;
+  position: fixed;
+  top: 13%;
+  left: 2%;
+  bottom: 0;
+  width: 48%;
+}
+
+.preview {
+  position: fixed;
+  top: 15%;
+  right: 0;
+  left: 50%;
+  bottom: 0;
+  overflow: auto;
+  padding: 30px;
+}
+
+.CodeMirror {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+}
+
+.CodeMirror-scroll {
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.CodeMirror pre {
+  line-height: 16px;
+}
+
+.emoji {
+  width: 1.5em;
+  height: 1.5em;
+  display: inline-block;
+  margin-bottom: -0.25em;
+  vertical-align: top;
+}
 
 .etc {
-  height: 8vh;
+  height: 7%;
+  margin-left: 5%;
   padding: 15px 8px;
 }
-
-.write {
-  height: 80vh;
-  display: flex;
-  padding-top: 10px;
-  justify-content: space-around;
-}
-.write .left {
-    position: relative;
-    background-color: #f4f4f4;
-    padding: 10px 10px;
-    /* padding-top: 10px;
-    padding-bottom: 10px;
-
-    padding-left: 15px; */
-    margin-right: 15px;
-    width: 45%;
-  }
-  .write .left textarea {
-    font-family: 'Nanum Gothic', sans-serif;
-    line-height: 20px;
-    overflow: auto;
-    resize: none;
-    border: none;
-    background-color: #f4f4f4;
-    width: 100%;
-    height: 100%;
-  }
-  .write .left textarea:focus {
-    outline: none;
-  }
-  
-  .write .right {
-    position: relative;
-    overflow: auto;
-    width: 55%;
-  }
-
-  .submit {
-    height: 8vh;
-    margin-top: 20px;
-  }
-
-
-.success {
-  outline: none;
-  height: 40px;
-  text-align: center;
-  width: 130px;
-  border-radius: 40px;
-  background: #fff;
-  border: 2px solid #1ECD97;
-  color: #1ECD97;
-  letter-spacing: 1px;
-  text-shadow: 0;
-  font-size: 12px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.25s ease;
-}
-.success:hover {
-  color: white;
-  background: #1ECD97;
-}
-.success:active {
-  letter-spacing: 2px;
-}
-.success:after {
-  content: "SUBMIT";
-}
-
-.fail {
-  outline: none;
-  height: 40px;
-  text-align: center;
-  width: 130px;
-  border-radius: 40px;
-  background: #fff;
-  border: 2px solid #f54545;
-  color: #f54545;
-  letter-spacing: 1px;
-  text-shadow: 0;
-  font-size: 12px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.25s ease;
-}
-.fail:hover {
-  color: white;
-  background: #f54545;
-}
-.fail:active {
-  letter-spacing: 2px;
-}
-.fail:after {
-  content: "CLOSE";
-}
-
-/*
-Basic input element using psuedo classes
-*/
 
 input,
 label {
@@ -123,7 +71,7 @@ input:focus {
 
 input.question {
   font-size: 48px;
-  font-weight: 300;
+  font-family: 'Jua', sans-serif;
   border-radius: 2px;
   margin: 0;
   border: none;
@@ -172,7 +120,7 @@ input.question:invalid {
 }
 
 input.question + label > span {
-  font-weight: 300;
+  font-family: 'Jua', sans-serif;
   margin: 0;
   position: absolute;
   color: #8F8F8F;
@@ -220,5 +168,163 @@ input.question:invalid ~ input[type="submit"] {
 @keyframes appear {
   100% {
     opacity: 1;
+  }
+}
+
+.foot {
+  position: fixed;
+  bottom: 0;
+  width: 50%;
+  height: 7%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  z-index: 99;
+}
+
+.foot .out {
+  margin: auto 0;
+  font-family: 'Jua', sans-serif;
+  margin-left: 2rem;
+}
+
+.foot .out a {
+  padding: 7px;
+}
+
+.btn {
+  color: #333;
+  cursor: pointer;
+  margin: 0 0 2em;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  font-size: 1.2rem;
+}
+
+.btn-3 {
+  background: #fff;
+  border: 1px solid #fff;
+  transition: all 150ms linear;
+}
+
+.btn-3:hover {
+  background: #eee;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.2);
+  color: #333;
+  text-decoration: none;
+  text-shadow: -1px -1px 0 #eee;
+  transition: all 250ms linear;
+}
+
+.foot .submit {
+  margin: auto 0;
+}
+
+
+
+/* 버튼 */
+
+@import url("https://fonts.googleapis.com/css?family=Mukta:700");
+* {
+  box-sizing: border-box;
+}
+*::before, *::after {
+  box-sizing: border-box;
+}
+
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+button.learn-more {
+  width: 9rem;
+  height: auto;
+}
+button.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #282936;
+  border-radius: 1.625rem;
+}
+button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.25rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+button.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #282936;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+button:hover .circle {
+  width: 100%;
+}
+button:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+button:hover .button-text {
+  color: #fff;
+}
+
+@supports (display: grid) {
+  body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0.625rem;
+    grid-template-areas: ". main main ." ". main main .";
+  }
+
+  #container {
+    grid-area: main;
+    align-self: center;
+    justify-self: center;
   }
 }

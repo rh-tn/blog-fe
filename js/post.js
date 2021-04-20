@@ -5,13 +5,15 @@
 
 ////////////////////////////////////////
 $(document).ready(function() {
+    // console.log($('.markdown-body').children('h1').css('font-family', "'Jua', sans-serif"));
+
 });
 
 var app = angular.module('cm', []);
 
 
 app.controller('ctrl', function($scope) {
-    $scope.my_markdown = "# Codemirror Markdown Editor\n\n> Built with Angular JS Custom Directive !\n\n# Feature\n- GitHub Flavored Preview\n- Emoji Support !! :smile: :+1:\n\n# Built with\n\n- **[marked](https://github.com/chjj/marked)** for Parsing Markdown\n- **[emoji](http://hassankhan.me/emojify.js/)** for emoji's ! :kissing_heart: :scream: :speech_balloon:\n- **[highlight-js](https://github.com/isagalaev/highlight.js)** for code highlighting\n- **[github-markdown-css](https://github.com/sindresorhus/github-markdown-css)** for beautifying markdown output\n- **[highlight-js css](https://github.com/isagalaev/highlight.js/tree/master/src/styles)** for beautifying code output\n\n\n# Examples\n* Javascript\n\n```javascript\nfunction() {	\n  console.log('This is awesome!');\n}\n```\n\n* Bash\n\n```bash\n# step 1\nnpm install\n```\netc..\n\n# The End\n- Enjoy ~";
+    $scope.my_markdown = "# Codemirror Markdown Editor\n\n> Built with Angular JS Custom Directive !\n\n## Feature\n- GitHub Flavored Preview\n- Emoji Support !! :smile: :+1:\n\n## Built with\n\n- **[marked](https://github.com/chjj/marked)** for Parsing Markdown\n- **[emoji](http://hassankhan.me/emojify.js/)** for emoji's ! :kissing_heart: :scream: :speech_balloon:\n- **[highlight-js](https://github.com/isagalaev/highlight.js)** for code highlighting\n- **[github-markdown-css](https://github.com/sindresorhus/github-markdown-css)** for beautifying markdown output\n- **[highlight-js css](https://github.com/isagalaev/highlight.js/tree/master/src/styles)** for beautifying code output\n\n\n## Examples\n* Javascript\n\n```javascript\nfunction() {	\n  console.log('This is awesome!');\n}\n```\n\n* Bash\n\n```bash\n## step 1\nnpm install\n```\netc..\n\n## The End\n- Enjoy ~";
 });
 
 app.directive('codeEditor', function($timeout) {

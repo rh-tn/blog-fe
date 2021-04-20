@@ -63,12 +63,8 @@ a {
   color: #111;
 }
 
-.purple {
-  color: #9d59eb;
-}
-
 .green {
-	color: #0ff1b3;
+	color: #9d59eb;
 }
 
 .row {
@@ -306,7 +302,7 @@ header {
   color: rgba(0, 0, 0, 0.4);
 }
 .list-menu:hover a:hover {
-  color: #0ff1b3;
+  color: #9d59eb;
 }
 
 

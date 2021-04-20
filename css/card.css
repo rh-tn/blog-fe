@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 
 .post {
   max-width: 900px;
@@ -15,7 +16,6 @@
 
 .post h2 {
   padding-top: 20px;
-  padding-bottom 10px;
   line-height: 50px;
   font-size: 24px;
   font-weight: 700;

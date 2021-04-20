@@ -9,10 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
 
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://knit.navercorp.com/libs/knit/2.0.0/css/knit.min.css" crossorigin="anonymous">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.6.0/codemirror.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.6.0/theme/base16-light.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/sindresorhus/github-markdown-css/gh-pages/github-markdown.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/isagalaev/highlight.js/master/src/styles/github.css">
 
@@ -62,13 +63,22 @@
         <!-- POST 제목 -->
         <div class="banner">
             <div class="title">제모옥은 젠킨스 조회로직 개선으로 하겠습니다. 근데 이제 비동기를 곁들인</div>
-            <div class="author">By SI-WON | 2021-03-16 <img src="../img/logo.png"></img></div>
+            <div class="sub-title">
+                <blockquote><p>부제모오오오옥은 서브타이틀이라 불립니다. 그런데 이제 영어로</p></blockquote>
+            </div>
+            <div class="author"> 
+                <div class="left"> <span>posted by 김준호 | 2021-03-16 </span> <img src="../img/logo.png"></img> </div>
+                <div class="right">
+                    <div class="social">
+                        <i id="github" class="icon-github"></i>
+                        <i id="linkedin" class="icon-linkedin-sign"></i>
+                        <i id="code" class="icon-code"></i>
+                        <i id="mail" class="icon-envelope"></i> 
+                    </div>
+                </div>
+            </div>
         </div>      
 
-        <!-- POST 부제목 -->
-        <div class="sub-title">
-            <blockquote><p>부제모오오오옥은 서브타이틀이라 불립니다. 그런데 이제 영어로</p></blockquote>
-        </div>
 
         <!-- POST 내용 -->
         <div ng-controller="ctrl">
@@ -76,7 +86,7 @@
                 <code-editor ng-model="my_markdown">
                 </code-editor>
             </div>
-            <div id="emo">
+            <div id="emo" class="preview">
                 <div markdown-viewer class="markdown-body"></div>
             </div>
         </div>
