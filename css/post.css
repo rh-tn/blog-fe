@@ -2,6 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 
+.bg-back {
+  position: absolute;
+  width: 100vw;
+  height: 30%;
+  /* opacity: 0.6; */
+  background-color: #f5f5f5;
+  z-index: -1;
+}
+
 .banner {
   margin: 5rem 0 1rem 0;
 }
@@ -124,7 +133,7 @@
   color: #77DDF6;
 }
 .social i#github:hover {
-  color: black;
+  color: #D43402
 }
 .social i#linkedin:hover {
   color: #0177B5;
@@ -142,6 +151,17 @@
   color: #F7B401;
 }
 
+@media only screen and (max-width: 1366px) {
+  .bg-back {
+    height: 22%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .bg-back {
+    height: 25%;
+  }
+}
 
   @media only screen and (max-width: 768px) {
     .banner .author .left {
@@ -160,6 +180,10 @@
       font-size: 1.5rem;
       /* margin-top: rem; */
       margin-bottom: 1.5rem;
+    }
+
+    .bg-back {
+      height: 25%;
     }
     
   }
